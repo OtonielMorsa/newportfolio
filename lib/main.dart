@@ -44,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Stack(
         children: [
-          Background(),
+          const Background(),
           Positioned(
             top: height * 0.05,
             left: width * .22,

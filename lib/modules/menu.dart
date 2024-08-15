@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_portfolio/modules/project.dart';
 
 class Menu extends StatefulWidget {
   const Menu({super.key});
@@ -32,28 +33,38 @@ class _MenuState extends State<Menu> {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _archivoMenu(width, height, Icons.desktop_mac_rounded),
-                _archivoMenu(width, height, Icons.phone_android_outlined),
-                _archivoMenu(width, height, Icons.memory),
-                _archivoMenu(width, height, Icons.code),
+                _archivoMenu(width, height, Icons.desktop_mac_rounded, context,
+                    "project"),
+                _archivoMenu(
+                    width, height, Icons.phone_android_outlined, context, "1"),
+                _archivoMenu(width, height, Icons.memory, context, "2"),
+                _archivoMenu(width, height, Icons.code, context, "3"),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _archivoMenu(width, height, Icons.phone_android_outlined),
-                _archivoMenu(width, height, Icons.phone_android_outlined),
-                _archivoMenu(width, height, Icons.phone_android_outlined),
-                _archivoMenu(width, height, Icons.phone_android_outlined),
+                _archivoMenu(
+                    width, height, Icons.phone_android_outlined, context, "4"),
+                _archivoMenu(
+                    width, height, Icons.phone_android_outlined, context, "5"),
+                _archivoMenu(
+                    width, height, Icons.phone_android_outlined, context, "6"),
+                _archivoMenu(
+                    width, height, Icons.phone_android_outlined, context, "7"),
               ],
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                _archivoMenu(width, height, Icons.disc_full_rounded),
-                _archivoMenu(width, height, Icons.disc_full_rounded),
-                _archivoMenu(width, height, Icons.disc_full_rounded),
-                _archivoMenu(width, height, Icons.disc_full_rounded),
+                _archivoMenu(
+                    width, height, Icons.disc_full_rounded, context, "8"),
+                _archivoMenu(
+                    width, height, Icons.disc_full_rounded, context, "9"),
+                _archivoMenu(
+                    width, height, Icons.disc_full_rounded, context, "10"),
+                _archivoMenu(
+                    width, height, Icons.disc_full_rounded, context, "11"),
               ],
             ),
           ],
@@ -63,40 +74,41 @@ class _MenuState extends State<Menu> {
   }
 }
 
-_archivoMenu(width, height, icono) {
-  return Container(
-    margin: EdgeInsets.all(height * .005),
-    width: width * .19,
-    height: height * .19,
-    decoration: BoxDecoration(
-      color: Colors.white,
-      border: Border.all(
-        color: const Color.fromARGB(255, 162, 162, 162),
-        width: height * .004,
-      ),
-      borderRadius: BorderRadius.circular(height * .04),
-      boxShadow: const [
-        BoxShadow(
-          color: Color.fromARGB(255, 181, 181, 181),
-          blurRadius: 6,
-          blurStyle: BlurStyle.outer,
+_archivoMenu(width, height, icono, context, tagHero) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.of(context).push(
+        PageRouteBuilder(
+          pageBuilder: (BuildContext context, _, __) {
+            return const Project();
+          },
         ),
-      ],
-    ),
-    child: InkResponse(
-      onTap: () {},
+      );
+    },
+    child: Hero(
+      tag: tagHero,
       child: Container(
-        alignment: Alignment.center,
-        child: Icon(
-          icono,
+        margin: EdgeInsets.all(height * .005),
+        width: width * .19,
+        height: height * .19,
+        decoration: BoxDecoration(
           color: Colors.white,
-          size: height * .1,
-          shadows: const [
-            Shadow(
-              color: Color.fromARGB(255, 216, 216, 216),
-              blurRadius: 2,
-            )
+          border: Border.all(
+            color: const Color.fromARGB(255, 162, 162, 162),
+            width: height * .004,
+          ),
+          borderRadius: BorderRadius.circular(height * .04),
+          boxShadow: const [
+            BoxShadow(
+              color: Color.fromARGB(255, 181, 181, 181),
+              blurRadius: 6,
+              blurStyle: BlurStyle.outer,
+            ),
           ],
+          image: const DecorationImage(
+            image: AssetImage('assets/images/mathbomb.png'),
+            fit: BoxFit.fill,
+          ),
         ),
       ),
     ),
