@@ -1,3 +1,5 @@
+import 'dart:convert';
+import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_portfolio/modules/project.dart';
 
@@ -9,6 +11,27 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
+  late List items;
+
+  @override
+  void setState(VoidCallback fn) {
+    // TODO: implement setState
+    super.setState(fn);
+  }
+
+  @override
+  void initState() {
+    readJson();
+    super.initState();
+  }
+
+  Future<void> readJson() async {
+    var data = await rootBundle.loadString("json/proyectos.json");
+    setState(() {
+      items = json.decode(data);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     final mq = MediaQuery.of(context).size;

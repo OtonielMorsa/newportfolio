@@ -48,7 +48,7 @@ class _MyHomePageState extends State<MyHomePage> {
           Positioned(
             top: height * 0.05,
             left: width * .22,
-            child: Menu(),
+            child: const Menu(),
           ),
         ],
       ),

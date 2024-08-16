@@ -36,7 +36,7 @@ class _BackgroundState extends State<Background> {
                 alignment: Alignment.center,
                 width: width * .5,
                 height: height * .3,
-                child: _fecha_hora(height),
+                child: _fechaHora(height),
               ),
             ),
           ],
@@ -105,7 +105,7 @@ class _HeaderPaintDiagonal extends CustomPainter {
     //
     // Dibujar contorno de figura
     final paint2 = Paint()
-      ..color = Color.fromARGB(255, 1, 130, 170)
+      ..color = const Color.fromARGB(255, 1, 130, 170)
       ..style = PaintingStyle.stroke
       ..strokeWidth = size.height * .01
       ..isAntiAlias = true
@@ -184,7 +184,7 @@ _circuloWii(height, width) {
         Text(
           "CV",
           style: TextStyle(
-            color: Color.fromARGB(255, 139, 139, 139),
+            color: const Color.fromARGB(255, 139, 139, 139),
             fontSize: height * .04,
             fontWeight: FontWeight.bold,
             shadows: const [
@@ -249,7 +249,7 @@ _circle(onTap, height, child) {
   );
 }
 
-_fecha_hora(height) {
+_fechaHora(height) {
   return StreamBuilder(
     stream: Stream.periodic(const Duration(seconds: 1)),
     builder: (context, snapshot) {

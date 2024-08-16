@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_portfolio/modules/background.dart';
 
 class Project extends StatefulWidget {
   const Project({super.key});
@@ -94,7 +93,7 @@ _boton(onTap, height, texto) {
       child: Text(
         texto,
         style: TextStyle(
-          color: Color.fromARGB(255, 116, 116, 116),
+          color: const Color.fromARGB(255, 116, 116, 116),
           fontSize: height * .04,
           fontWeight: FontWeight.bold,
         ),
