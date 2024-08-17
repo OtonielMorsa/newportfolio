@@ -28,7 +28,8 @@ class _MenuState extends State<Menu> {
   Future<void> readJson() async {
     var data = await rootBundle.loadString("json/proyectos.json");
     setState(() {
-      items = json.decode(data);
+      var projects = json.decode(data);
+      items = projects[0]["projects"];
     });
   }
 
@@ -46,9 +47,9 @@ class _MenuState extends State<Menu> {
     }
 
     return Container(
-      height: height,
-      width: width,
-      alignment: Alignment.topCenter,
+      height: height * .7,
+      width: width * 1,
+      alignment: Alignment.center,
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
