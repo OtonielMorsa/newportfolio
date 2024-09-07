@@ -1,4 +1,6 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_portfolio/modules/background.dart';
 import 'package:flutter_portfolio/modules/menu.dart';
 
@@ -29,6 +31,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     final mq = MediaQuery.of(context).size;
     double height = 0;
@@ -42,16 +50,18 @@ class _MyHomePageState extends State<MyHomePage> {
     }
 
     return Scaffold(
-      body: Stack(
+        body: FadeIn(
+      duration: Duration(seconds: 2),
+      child: Stack(
         children: [
           const Background(),
           Positioned(
             top: height * 0.05,
-            left: width * .22,
+            left: width * .32,
             child: const Menu(),
           ),
         ],
       ),
-    );
+    ));
   }
 }

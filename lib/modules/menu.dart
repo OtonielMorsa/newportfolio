@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'dart:convert';
 import 'package:flutter/services.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter_carousel_widget/flutter_carousel_widget.dart';
 import 'package:flutter_portfolio/modules/project.dart';
 
 class Menu extends StatefulWidget {
@@ -11,26 +12,18 @@ class Menu extends StatefulWidget {
 }
 
 class _MenuState extends State<Menu> {
-  late List items;
-
-  @override
-  void setState(VoidCallback fn) {
-    // TODO: implement setState
-    super.setState(fn);
-  }
+  List items = [];
 
   @override
   void initState() {
-    readJson();
     super.initState();
   }
 
-  Future<void> readJson() async {
-    var data = await rootBundle.loadString("json/proyectos.json");
-    setState(() {
-      var projects = json.decode(data);
-      items = projects[0]["projects"];
-    });
+  verifySendProject(int numGrupo, numProject) {
+    if (items[numGrupo]["projects"].length <= numProject) {
+      return null;
+    }
+    return items[numGrupo]["projects"][numProject];
   }
 
   @override
@@ -46,71 +39,110 @@ class _MenuState extends State<Menu> {
       width = mq.width;
     }
 
+    Future<List> readJson() async {
+      final response = await rootBundle.loadString("json/proyectos.json");
+      return json.decode(response);
+    }
+
     return Container(
-      height: height * .7,
-      width: width * 1,
       alignment: Alignment.center,
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _archivoMenu(width, height, Icons.desktop_mac_rounded, context,
-                    "project"),
-                _archivoMenu(
-                    width, height, Icons.phone_android_outlined, context, "1"),
-                _archivoMenu(width, height, Icons.memory, context, "2"),
-                _archivoMenu(width, height, Icons.code, context, "3"),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _archivoMenu(
-                    width, height, Icons.phone_android_outlined, context, "4"),
-                _archivoMenu(
-                    width, height, Icons.phone_android_outlined, context, "5"),
-                _archivoMenu(
-                    width, height, Icons.phone_android_outlined, context, "6"),
-                _archivoMenu(
-                    width, height, Icons.phone_android_outlined, context, "7"),
-              ],
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                _archivoMenu(
-                    width, height, Icons.disc_full_rounded, context, "8"),
-                _archivoMenu(
-                    width, height, Icons.disc_full_rounded, context, "9"),
-                _archivoMenu(
-                    width, height, Icons.disc_full_rounded, context, "10"),
-                _archivoMenu(
-                    width, height, Icons.disc_full_rounded, context, "11"),
-              ],
-            ),
-          ],
-        ),
+      child: FutureBuilder<List?>(
+        future: readJson(),
+        builder: (context, snapshot) {
+          // if (snapshot.connectionState == ConnectionState.waiting) {
+          //   return const Center(
+          //     child: SizedBox(
+          //       width: 200,
+          //       height: 200,
+          //       child: CircularProgressIndicator(),
+          //     ),
+          //   );
+          // }
+          if (snapshot.hasData) {
+            items = snapshot.data!;
+
+            return Container(
+              alignment: Alignment.center,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 0)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 1)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 2)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 3)),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 4)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 5)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 6)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 7)),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 8)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 9)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 10)),
+                      _archivoMenu(
+                          width, height, context, verifySendProject(0, 11)),
+                    ],
+                  ),
+                ],
+              ),
+            );
+          } else {
+            return const Center(child: Text('Error'));
+          }
+        },
       ),
     );
   }
 }
 
-_archivoMenu(width, height, icono, context, tagHero) {
+_archivoMenu(width, height, context, project) {
+  print(project);
+  String imagen = "";
+  String hero = "";
+  if (project != null) {
+    imagen = project["imagenes"][0]!;
+    hero = project["titulo"];
+  }
+  print(imagen);
+  print(hero);
   return GestureDetector(
     onTap: () {
-      Navigator.of(context).push(
-        PageRouteBuilder(
-          pageBuilder: (BuildContext context, _, __) {
-            return const Project();
-          },
-        ),
-      );
+      if (hero != "") {
+        Navigator.of(context).push(
+          PageRouteBuilder(
+            pageBuilder: (BuildContext context, _, __) {
+              return Project(
+                project: project,
+              );
+            },
+          ),
+        );
+      }
     },
     child: Hero(
-      tag: tagHero,
+      tag: hero,
       child: Container(
         margin: EdgeInsets.all(height * .005),
         width: width * .19,
@@ -129,10 +161,12 @@ _archivoMenu(width, height, icono, context, tagHero) {
               blurStyle: BlurStyle.outer,
             ),
           ],
-          image: const DecorationImage(
-            image: AssetImage('assets/images/mathbomb.png'),
-            fit: BoxFit.fill,
-          ),
+          image: imagen != ""
+              ? DecorationImage(
+                  image: AssetImage(imagen),
+                  fit: BoxFit.fill,
+                )
+              : null,
         ),
       ),
     ),

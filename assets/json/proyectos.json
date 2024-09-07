@@ -3,17 +3,8 @@
         "titulo":"Proyectos Web escolares",
         "projects":[
             {
-                "titulo":"Animes",
-                "imagenes":["assets/img/projects/animes/animes1.png", "assets/img/projects/animes/animes2.png"],
-                "descripcion":"Aplicación web que consume una API de catálogo de animes, utilizando una API gratuita y trabajando en el paginado de los datos recibidos y cuantos se muestran por cada paginación. Ademas de trabajar en las rutas para cambiar de página en el sitio.",
-                "lenguajes":"React JavaScript",
-                "materia/curso":["Aplicaciones Web Progresivas", "/"],
-                "fechaRealizado": "23/Febrero/2023",
-                "dispositivo":"PC"
-            },
-            {
                 "titulo":"UGames",
-                "imagenes":["assets/img/projects/uGames/UGamesHome.png", "assets/img/projects/uGames/UGamesJuegos.png", "assets/img/projects/uGames/UGamesLogin.png"],
+                "imagenes":["img/projects/uGames/UGamesHome.webp", "img/projects/uGames/UGamesJuegos.webp", "img/projects/uGames/UGamesLogin.webp"],
                 "descripcion":"Biblioteca de juegos usando MariaDB en el servidor de xampp, se creó una API desde cero para crear especificamente funciones requeridas, se creó el CRUD completo para cada juego agregado y el CREATE para registrar usuarios.",
                 "lenguajes":"JQuery Javascript",
                 "materia/curso":["Arquitecturas de Software", "/"],
@@ -23,7 +14,7 @@
             },
             {
                 "titulo":"Viajes",
-                "imagenes":["assets/img/projects/viajes/viajesHome.png", "assets/img/projects/viajes/viajesLugares.png", "assets/img/projects/viajes/viajesVuelos.png"],
+                "imagenes":["img/projects/viajes/viajesHome.webp", "img/projects/viajes/viajesLugares.webp", "img/projects/viajes/viajesVuelos.webp"],
                 "descripcion":"Página web para registrar viajes, registrando el transporte, el lugar d destino y la combinación de ambos. CRUD completo en SQL, utilizando una API creada para el proyecto basada en laravel para la conexión entre el frontend y la base de datos.",
                 "lenguajes":"php Laravel",
                 "materia/curso":["Desarrollo Web Integral", "/"],
@@ -33,7 +24,7 @@
             },
             {
                 "titulo":"Carrito de compras",
-                "imagenes":["assets/img/projects/carrito/compraMangas1.png","assets/img/projects/carrito/compraMangas2.png","assets/img/projects/carrito/compraMangas3.png","assets/img/projects/carrito/compraMangas4.png","assets/img/projects/carrito/compraMangas5.png"],
+                "imagenes":["img/projects/carrito/compraMangas1.webp","img/projects/carrito/compraMangas2.webp","img/projects/carrito/compraMangas3.webp","img/projects/carrito/compraMangas4.webp","img/projects/carrito/compraMangas5.webp"],
                 "descripcion":"Página para comprar mangas utilizando la API de Paypal. Contando con cards con la información de los mangas, un muestreo de los mangas agregados al carrito, alert donde se avisa que procedió la compra y una lista de lospedidos realizados.",
                 "lenguajes":"JQuery Javascript",
                 "materia/curso":["Desarrollo Web Profesional", "/"],
@@ -49,7 +40,7 @@
         "projects":[
             {
                 "titulo":"Go Travel",
-                "imagenes":["assets/img/projects/goTravel/GoTravel1.png", "assets/img/projects/goTravel/GoTravel2.png", "assets/img/projects/goTravel/GoTravel3.png", "assets/img/projects/goTravel/GoTravel4.png"],
+                "imagenes":["img/projects/goTravel/GoTravel1.webp", "img/projects/goTravel/GoTravel2.webp", "img/projects/goTravel/GoTravel3.webp", "img/projects/goTravel/GoTravel4.webp"],
                 "descripcion":"Utilizando la api de google place y la api de travel advisor, replicando la aplicación de Vetrivel Rapi, aprendiendo a utilizar la librería de estílos TailWindCSS. La aplicación puede vuscar ciudades, estados o países y de ellos obtener los Hoteles, restaurantes o atraciones registradas en la api de Travel Advisor.",
                 "lenguajes":"React Native Expo",
                 "materia/curso":["Desarrollo Movil Integral", "/"],
@@ -58,7 +49,7 @@
             },
             {
                 "titulo":"Pokedex",
-                "imagenes":["assets/img/projects/react-pokedex.png"],
+                "imagenes":["img/projects/react-pokedex.webp"],
                 "descripcion":"Pequeña Pokedex para dispositivos moviles. Se trabajó con pokeApi. La aplicación realiza un muestreo de todos los pokemon disponibles del API, aparecen uno por uno y podemos ver el siguiente, anterior o saltarnos 10 pokemones pulsando los botones al costado derecho e izquierdo del sprite del pokemon mostrado, se muestran datos como el tipo de pokemon, su altura o ataque principal.",
                 "lenguajes":"React Native",
                 "materia/curso":["Desarrollo Movil Integral", "/"],
@@ -67,7 +58,7 @@
             },
             {
                 "titulo":"Chat App con Firebase",
-                "imagenes":["assets/img/projects/chatApp/signUp.png", "assets/img/projects/chatApp/login.png", "assets/img/projects/chatApp/home.png", "assets/img/projects/chatApp/chat.png"],
+                "imagenes":["img/projects/chatApp/signUp.webp", "img/projects/chatApp/login.webp", "img/projects/chatApp/home.webp", "img/projects/chatApp/chat.webp"],
                 "descripcion":"Aplicación que utiliza Firebase para crear un Chat estilo messenger, además de utilizar las funcion de Firebase para crear un inicio de sesión y registro de usuario. la base de datos de Firebase almacena los mensajes enviados por el chat.",
                 "lenguajes":"React Native",
                 "materia/curso":["Desarrollo Movil Integral", "/"],
@@ -76,7 +67,7 @@
             },
             {
                 "titulo":"Calculadora",
-                "imagenes":["assets/img/projects/calculadora.png"],
+                "imagenes":["img/projects/calculadora.webp"],
                 "descripcion":"Calculadora creada como primer proyecto en React Native, principalmente para comprender de una manera mas eficiente como funciona esta libreria de JavaScript.",
                 "lenguajes":"React Native",
                 "materia/curso":["Desarrollo Movil Integral", "/"],
@@ -85,7 +76,7 @@
             },
             {
                 "titulo":"PsychoNauts Characters",
-                "imagenes":["assets/img/projects/psychoNauts/backPsycho.png", "assets/img/projects/psychoNauts/personajes.png", "assets/img/projects/psychoNauts/personaje.png"],
+                "imagenes":["img/projects/psychoNauts/backPsycho.webp", "img/projects/psychoNauts/personajes.webp", "img/projects/psychoNauts/personaje.webp"],
                 "descripcion":"Aplicación que muestra los personajes de la saga de juegos Psychonauts, se utilizó una API gratuita para obtener los datos, al pulsar el contendor de algun personaje se redireccionará a una nueva ventana donde se puede observar mas información de dicho personaje.",
                 "lenguajes":"Flutter & Dart",
                 "materia/curso":["Desarrollo Movil Multiplataforma", "/"],
@@ -132,7 +123,7 @@
             },
             {
                 "titulo":"Horror Game Project",
-                "imagenes":["assets/img/projects/horrorGame/HorrorGame1.png", "assets/img/projects/horrorGame/HorrorGame2.png", "assets/img/projects/horrorGame/HorrorGame3.png", "assets/img/projects/horrorGame/HorrorGame4.png", "assets/img/projects/horrorGame/HorrorGame5.png", "assets/img/projects/horrorGame/HorrorGame6.png"],
+                "imagenes":["img/projects/horrorGame/HorrorGame1.webp", "img/projects/horrorGame/HorrorGame2.webp", "img/projects/horrorGame/HorrorGame3.webp", "img/projects/horrorGame/HorrorGame4.webp", "img/projects/horrorGame/HorrorGame5.webp", "img/projects/horrorGame/HorrorGame6.webp"],
                 "descripcion":"Utilizando Godot Engine, este es un juego desarrollado con el objetivo del aprendizaje de dicho motor y entender como funcionan los videojuegos. Tanto texturas como objetos no son de mi autoría.",
                 "lenguajes":"Godot Script",
                 "materia/curso":["Tutoriales en Youtube", "/"],
@@ -141,7 +132,7 @@
             },
             {
                 "titulo":"MathBomb",
-                "imagenes":["assets/img/projects/mathBomb/mathBomb1.png", "assets/img/projects/mathBomb/mathBomb2.png", "assets/img/projects/mathBomb/mathBomb3.png", "assets/img/projects/mathBomb/mathBomb4.png", "assets/img/projects/mathBomb/mathBomb5.png", "assets/img/projects/mathBomb/mathBomb6.png"],
+                "imagenes":["img/projects/mathBomb/mathBomb1.webp", "img/projects/mathBomb/mathBomb2.webp", "img/projects/mathBomb/mathBomb3.webp", "img/projects/mathBomb/mathBomb4.webp", "img/projects/mathBomb/mathBomb5.webp", "img/projects/mathBomb/mathBomb6.webp"],
                 "descripcion":"Proyecto MathBomb, un juego de lógica matemática en desarrollo con apoyo de mi hermano en los diseños, el juego consta de resolver los ejercicios que aparecen en la pantalla en contra reloj, existen niveles prefijos y actualmente se está desarrollando un modo randomizando las operaciones a resolver. La aplicación cuenta con audios, vibración, animaciones en transiciones y botones que cambian de color ",
                 "lenguajes":"Flutter Android",
                 "fechaRealizado": "Actualmente en desarrollo",
@@ -151,7 +142,7 @@
             },
             {
                 "titulo":"Visual Stock Manager",
-                "imagenes":["assets/img/projects/visual/visuel1.png", "assets/img/projects/visual/visuel2.png", "assets/img/projects/visual/visuel3.png", "assets/img/projects/visual/visuel4.png", "assets/img/projects/visual/visuel5.png", "assets/img/projects/visual/visuel6.png", "assets/img/projects/visual/visuel7.png", "assets/img/projects/visual/visuel8.png"],
+                "imagenes":["img/projects/visual/visuel1.webp", "img/projects/visual/visuel2.webp", "img/projects/visual/visuel3.webp", "img/projects/visual/visuel4.webp", "img/projects/visual/visuel5.webp", "img/projects/visual/visuel6.webp", "img/projects/visual/visuel7.webp", "img/projects/visual/visuel8.webp"],
                 "descripcion":"Realizado como proyecto para Estadia en la Universidad UTSLRC, éste es un proyecto para la empresa Visuel Diseño Gráfico para el control de y manejo de inventarios, contando con inicio de sesión, muestreo de productos, pedidos por realizar o entregar, gráficas de ventas por meses, una pequeña configuración para el usuario y un apartado de notas.",
                 "lenguajes":"Flutter Desktop",
                 "fechaRealizado": "inicios de Septiembre a finales de Noviembre del año 2021",
@@ -165,7 +156,7 @@
         "projects":[
             {
                 "titulo":"Food UI",
-                "imagenes":["assets/img/projects/FoodUi/food1.png", "assets/img/projects/FoodUi/food2.png", "assets/img/projects/FoodUi/food3.png", "assets/img/projects/FoodUi/food4.png"],
+                "imagenes":["img/projects/FoodUi/food1.webp", "img/projects/FoodUi/food2.webp", "img/projects/FoodUi/food3.webp", "img/projects/FoodUi/food4.webp"],
                 "descripcion":"Basado en Coffee UI del youtuber, esta es una interfaz de usuario donde se ppueden encontrar las mejores comidas de 4 países, este proyecto cuenta con scroll horizontal tanto para el tipo de comida como para las cartas de cada plato de comida, dependiendo el tipo de comida que se seleccione, la aplicación detectará el cambio y actualizará los platos",
                 "lenguajes":"Flutter & Dart",
                 "materia/curso":["Mitch Koko - YouTube (Click para ver video)", "https://www.youtube.com/watch?v=e8avvPPhyVk"],
@@ -175,7 +166,7 @@
             
             {
                 "titulo":"Tic Tac Toe Game",
-                "imagenes":["assets/img/projects/gato/gato1.png", "assets/img/projects/gato/gato2.png", "assets/img/projects/gato/gato3.png"],
+                "imagenes":["img/projects/gato/gato1.webp", "img/projects/gato/gato2.webp", "img/projects/gato/gato3.webp"],
                 "descripcion":"Recreación del juego Tic Tac Toe, utilizando Flutter y dart, para dos jugadores en el mismo dispositivo",
                 "lenguajes":"Flutter & Dart",
                 "materia/curso":["Dear Programmer - YouTube (Click para ver video)", "https://www.youtube.com/watch?v=hhkFTrgTzec&list=LL&index=4&t=8s"],
@@ -184,7 +175,7 @@
             },
             {
                 "titulo":"Travel Mobile App UI",
-                "imagenes":["assets/img/projects/travelApp/travel1.png","assets/img/projects/travelApp/travel2.png","assets/img/projects/travelApp/travel3.png","assets/img/projects/travelApp/travel4.png"],
+                "imagenes":["img/projects/travelApp/travel1.webp","img/projects/travelApp/travel2.webp","img/projects/travelApp/travel3.webp","img/projects/travelApp/travel4.webp"],
                 "descripcion":"Interfáz de usuario diseñado en flutter para ver viajes y su información, trabajando un poco con librerias de dart para trabajar con las estrellas del rating y la libreria de GoogleFonts para trabajar con los textos",
                 "lenguajes":"Flutter & Dart",
                 "materia/curso":["Dear Programmer - YouTube (Click para ver video)", "https://www.youtube.com/watch?v=3ipHn2tcbqE&list=LL&index=4"],
@@ -193,7 +184,7 @@
             },
             {
                 "titulo":"Snake Game",
-                "imagenes":["assets/img/projects/snakeReact/snakeReactTs1.png", "assets/img/projects/snakeReact/snakeReactTs2.png", "assets/img/projects/snakeReact/snakeReactTs3.png"],
+                "imagenes":["img/projects/snakeReact/snakeReactTs1.webp", "img/projects/snakeReact/snakeReactTs2.webp", "img/projects/snakeReact/snakeReactTs3.webp"],
                 "descripcion":"Recreación del juego retro Snake, utilizando React Native y TypeScript, donde se puede realizar las acciones basicas del juego, ademas de reiniciar o pausarlo.",
                 "lenguajes":"React Native, TypeScript",
                 "materia/curso":["BetoMoedano - YouTube (Click para ver video)", "https://www.youtube.com/watch?v=5aGpFdPvHR8"],
@@ -214,7 +205,7 @@
             },
             {
                 "titulo":"Dibujo",
-                "imagenes":["assets/img/dibujos/imagen1.jpg","assets/img/dibujos/imagen2.jpg","assets/img/dibujos/imagen3.jpg","assets/img/dibujos/imagen4.jpg","assets/img/dibujos/imagen5.jpg"],
+                "imagenes":["img/dibujos/imagen1.jpg","img/dibujos/imagen2.jpg","img/dibujos/imagen3.jpg","img/dibujos/imagen4.jpg","img/dibujos/imagen5.jpg"],
                 "descripcion":"Apesar de no ser un hobbie muy constante y de evidentemente no ser muy bueno, disfruto mucho dibujar desde retratos hasta caricaturas. cuando quiero dibujar simplemente lo hago.",
                 "lenguajes":"a mano",
                 "dispositivo":"PC"
